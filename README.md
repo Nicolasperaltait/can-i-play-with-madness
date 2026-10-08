@@ -2,6 +2,17 @@
 
 > Si. La IA puede improvisar. Las decisiones importantes merecen una partitura.
 
+<p align="center">
+  <strong>VARIOS MOTORES · UNA MEMORIA COMPARTIDA · CRITERIO QUE PERDURA</strong>
+</p>
+
+<p align="center">
+  <a href="#en-30-segundos">El problema</a> ·
+  <a href="#arquitectura-conceptual">El diseño</a> ·
+  <a href="#recorrido-de-lectura">La partitura</a> ·
+  <a href="#que-puede-resolver-en-una-empresa">La escala</a>
+</p>
+
 ChatGPT, Codex, Claude, Claude Code, modelos locales y un fallback pueden
 participar del mismo trabajo. Cada uno aporta algo; ninguno recuerda por arte
 de magia lo que hicieron los demas. Sin un protocolo, la siguiente sesion pide
@@ -17,10 +28,6 @@ Este repositorio documenta un patron para que varios motores de inteligencia
 artificial trabajen sobre el mismo conocimiento sin depender de que una sola
 ventana recuerde todo. La propuesta separa el codigo, la memoria local del
 proyecto, el hub compartido, el conocimiento durable y la publicacion.
-
-El titulo es una referencia editorial a **Can I Play with Madness**, de Iron Maiden,
-y a la referencia de Chema Alonso que inspira esta presentacion. No se reproducen letras ni contenido de
-la charla: se toma la pregunta como una buena forma de presentar el problema.
 
 ## En 30 segundos
 
@@ -74,6 +81,9 @@ La arquitectura distingue cinco responsabilidades:
 4. **Orquestacion:** asignacion de tareas entre motores con el minimo contexto.
 5. **Conocimiento durable:** principios y decisiones que sobreviven al proyecto.
 
+**Segui el mapa:** [Arquitectura y modelo mental](docs/01-arquitectura.md)
+explica por que cada responsabilidad tiene su propio lugar.
+
 ## Como funciona el workflow
 
 ### Una memoria general y una memoria por proyecto
@@ -93,6 +103,10 @@ Memoria persistente significa recuperar contexto externo cuando hace falta.
 No cambia los pesos del modelo: el conocimiento sobrevive al chat porque esta
 en documentos propios. La memoria de la plataforma queda como apoyo secundario.
 
+**Dentro del proyecto:** [La partitura de cada proyecto](docs/07-memoria-de-proyecto.md)
+recorre sus documentos y muestra una sesion completa, desde el arranque hasta
+el relevo al siguiente motor.
+
 ### El router, la audiencia y la frescura
 
 El router localiza la fuente correcta y comprueba si puede entregar informacion.
@@ -105,6 +119,11 @@ Si hay una respuesta autorizada y vigente, se reutiliza. Si falta, se consulta
 la fuente. Si no hay permiso, se devuelve un puntero o se detiene la consulta.
 "Mandale todo, por las dudas" deja de ser la estrategia de contexto. Suele
 funcionar hasta que alguien pregunta que habia en "todo".
+
+**Quien recibe que:** [Memoria, ruteo y triangulacion](docs/03-memoria-ruteo-y-triangulacion.md)
+desarrolla audiencia, clasificacion, frescura y autoridad con un glosario.
+
+### El circuito completo
 
 1. Una persona o una IA modifica una fuente de trabajo.
 2. Un trigger detecta el evento, mide la divergencia o solicita un recibo.
@@ -130,6 +149,9 @@ patron correcto es mas preciso:
 Asi, la automatizacion mueve informacion de forma controlada, pero no inventa
 una sincronizacion universal ni convierte un cambio local en una publicacion.
 
+**Cuando entra cada control:** [Triggers, recibos y automatizacion](docs/02-triggers-y-automatizacion.md)
+conecta eventos, scripts y verificaciones con su proposito.
+
 ## Triangulacion entre motores
 
 Un escenario ilustrativo puede usar Claude, Codex y Gemini con estos roles:
@@ -146,17 +168,22 @@ Los nombres representan roles intercambiables. La integracion concreta depende
 de los conectores disponibles; este repositorio documenta el contrato del flujo,
 no afirma que todas las conexiones esten activas en todos los entornos.
 
-## Documentacion
+## Recorrido de lectura
 
-- [Memoria de cada proyecto, paso a paso](docs/07-memoria-de-proyecto.md)
-- [Motores, IA local, fallback y presupuesto de tokens](docs/08-motores-fallback-y-tokens.md)
-- [Arquitectura y modelo mental](docs/01-arquitectura.md)
-- [Triggers, recibos y automatizacion](docs/02-triggers-y-automatizacion.md)
-- [Memoria, ruteo y triangulacion](docs/03-memoria-ruteo-y-triangulacion.md)
-- [Escala profesional y empresarial](docs/04-escala-profesional.md)
-- [Seguridad, privacidad y sanitizacion](docs/05-seguridad-y-sanitizacion.md)
-- [Caso de estudio: de contexto perdido a memoria operable](docs/casos-de-estudio/01-contexto-perdido-y-memoria-operable.md)
-- [Playbook de implementacion](docs/06-playbook-de-implementacion.md)
+Cada capitulo responde una pregunta. Podes seguir el recorrido o entrar por
+el tema que necesitas entender.
+
+| Paso | La pregunta | Abri la partitura |
+|---|---|---|
+| 01 | Que problema llevo a construir esto? | [El caso: contexto perdido](docs/casos-de-estudio/01-contexto-perdido-y-memoria-operable.md) |
+| 02 | Como encajan memoria, fuentes y hub? | [Arquitectura y modelo mental](docs/01-arquitectura.md) |
+| 03 | Que recuerda cada proyecto y como lo recupera otra IA? | [Memoria de proyecto, paso a paso](docs/07-memoria-de-proyecto.md) |
+| 04 | Que se dispara al iniciar, cerrar o commitear? | [Triggers, recibos y automatizacion](docs/02-triggers-y-automatizacion.md) |
+| 05 | Como viaja el contexto y quien puede recibirlo? | [Router, audiencia, frescura y triangulacion](docs/03-memoria-ruteo-y-triangulacion.md) |
+| 06 | Como se reparten motores, fallback y tokens? | [Motores y presupuesto](docs/08-motores-fallback-y-tokens.md) |
+| 07 | Como se protege lo que no debe circular? | [Seguridad y sanitizacion](docs/05-seguridad-y-sanitizacion.md) |
+| 08 | Que cambia cuando participa toda una empresa? | [Escala profesional](docs/04-escala-profesional.md) |
+| 09 | Como empezar a implementarlo? | [Playbook de implementacion](docs/06-playbook-de-implementacion.md) |
 
 ## Que puede resolver en una empresa
 
@@ -173,6 +200,9 @@ necesitan sin mezclar permisos. Por ejemplo:
 
 La escala cambia la infraestructura, no el principio: cada dominio debe seguir
 teniendo una autoridad, una audiencia y un limite de exposicion claros.
+
+**Llevalo a un equipo:** [Escala profesional y empresarial](docs/04-escala-profesional.md)
+describe dominios, responsables y un despliegue por etapas.
 
 ## Lo que este repositorio no promete
 
@@ -195,6 +225,9 @@ Se describen herramientas utilizadas y familias locales verificadas como
 instaladas. No se atribuye una integracion automatica a partir de la instalacion.
 El ahorro usa respuestas vigentes, consultas acotadas y relevos pequenos; no
 hay porcentajes medidos ni conmutacion automatica por consumo acreditados aqui.
+
+**Reparti el trabajo:** [Motores, fallback y tokens](docs/08-motores-fallback-y-tokens.md)
+explica como continuar con contexto minimo y administrar capacidad.
 
 ## Entonces, podemos jugar con la locura?
 
