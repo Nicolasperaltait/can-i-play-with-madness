@@ -3,13 +3,13 @@
 > Si. La IA puede improvisar. Las decisiones importantes merecen una partitura.
 
 <p align="center">
-  <strong>VARIOS MOTORES · UNA MEMORIA COMPARTIDA · CRITERIO QUE PERDURA</strong>
+  <strong>VARIOS MOTORES | UNA MEMORIA COMPARTIDA | CRITERIO QUE PERDURA</strong>
 </p>
 
 <p align="center">
-  <a href="#en-30-segundos">El problema</a> ·
-  <a href="#arquitectura-conceptual">El diseño</a> ·
-  <a href="#recorrido-de-lectura">La partitura</a> ·
+  <a href="#en-30-segundos">El problema</a> |
+  <a href="#arquitectura-conceptual">El diseno</a> |
+  <a href="#recorrido-de-lectura">La partitura</a> |
   <a href="#que-puede-resolver-en-una-empresa">La escala</a>
 </p>
 
