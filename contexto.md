@@ -1,5 +1,7 @@
 # Contexto - persistent-ai-memory-workflow
 
+**Idioma / Language:** Espanol | [English](docs/en/context.md)
+
 Ficha rapida para entender que muestra este repositorio.
 
 ## 1. Que es

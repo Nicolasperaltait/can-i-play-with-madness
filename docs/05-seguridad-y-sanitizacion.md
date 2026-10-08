@@ -1,5 +1,7 @@
 # Seguridad, privacidad y sanitizacion
 
+**Idioma / Language:** Espanol | [English](en/05-security-and-sanitization.md)
+
 Can I Play with Madness? Si, cuando podemos definir que ve cada participante
 y revocar ese acceso. Compartir la partitura no exige entregar las llaves del
 edificio: la audiencia delimita el contexto de cada tarea.

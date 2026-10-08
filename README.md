@@ -1,5 +1,7 @@
 # Can I Play with Madness?
 
+**Idioma / Language:** Espanol | [English](docs/en/README.md)
+
 > Si. La IA puede improvisar. Las decisiones importantes merecen una partitura.
 
 <p align="center">

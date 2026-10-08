@@ -1,5 +1,7 @@
 # Triggers, recibos y automatizacion
 
+**Idioma / Language:** Espanol | [English](en/02-triggers-and-automation.md)
+
 Can I Play with Madness? Los triggers son las entradas a tiempo: el control
 correcto cuando empieza una sesion, termina una tanda o se prepara un commit.
 

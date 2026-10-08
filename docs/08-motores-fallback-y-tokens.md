@@ -1,5 +1,7 @@
 # Varios motores, un presupuesto: repartir la locura
 
+**Idioma / Language:** Espanol | [English](en/08-engines-fallback-and-tokens.md)
+
 Mas motores aportan alternativas y tambien coordinacion. La memoria permite
 cambiar de herramienta conservando el trabajo sin reenviar toda la conversacion.
 

@@ -1,5 +1,7 @@
 # Escala profesional y empresarial
 
+**Idioma / Language:** Espanol | [English](en/04-professional-scale.md)
+
 Can I Play with Madness? A escala empresarial la pregunta se transforma en
 como coordinar muchas voces con propietarios, permisos y fuentes vigentes.
 La propuesta requiere responsables por dominio: reunir documentos sin esos

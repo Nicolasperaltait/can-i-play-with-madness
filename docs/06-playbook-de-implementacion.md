@@ -1,5 +1,7 @@
 # Playbook de implementacion
 
+**Idioma / Language:** Espanol | [English](en/06-implementation-playbook.md)
+
 Can I Play with Madness? Empezar por una memoria local verificable permite
 sumar motores conservando una forma de volver al estado y a la evidencia.
 La primera tarea es definir autoridad y continuidad; los conectores vienen

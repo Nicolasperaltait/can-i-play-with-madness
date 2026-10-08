@@ -1,5 +1,7 @@
 # Caso de estudio: de contexto perdido a memoria operable
 
+**Idioma / Language:** Espanol | [English](../en/case-studies/01-lost-context.md)
+
 Can I Play with Madness? El problema aparece cuando cambia el interprete y la
 decision se queda en una conversacion. Este caso explica el criterio para
 darle al proyecto una memoria que el siguiente motor pueda recuperar.

@@ -1,5 +1,7 @@
 # Arquitectura y modelo mental
 
+**Idioma / Language:** Espanol | [English](en/01-architecture.md)
+
 Can I Play with Madness? La arquitectura es la partitura: define que recuerda
 cada proyecto y como encuentran contexto los distintos motores.
 

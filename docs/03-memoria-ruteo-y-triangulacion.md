@@ -1,5 +1,7 @@
 # Memoria, ruteo y triangulacion
 
+**Idioma / Language:** Espanol | [English](en/03-routing-and-triangulation.md)
+
 Can I Play with Madness? El router reparte las partituras segun quien necesita
 tocarlas. Su funcion es localizar la autoridad, comprobar permiso y medir si
 una respuesta sigue vigente antes de entregar contexto.

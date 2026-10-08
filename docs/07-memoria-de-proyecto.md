@@ -1,5 +1,7 @@
 # La partitura de cada proyecto: memoria local
 
+**Idioma / Language:** Espanol | [English](en/07-project-memory.md)
+
 Can I Play with Madness? Cambiar de motor resulta manejable cuando el proyecto
 puede explicar donde quedo el trabajo.
 
