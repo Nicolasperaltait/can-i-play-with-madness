@@ -1,5 +1,28 @@
 # Memoria, ruteo y triangulacion
 
+Can I Play with Madness? El router reparte las partituras segun quien necesita
+tocarlas. Su funcion es localizar la autoridad, comprobar permiso y medir si
+una respuesta sigue vigente antes de entregar contexto.
+
+## Glosario con proposito
+
+| Concepto | Que es | Por que y para que |
+|---|---|---|
+| Hub | Nodo compartido de memoria general, catalogo y relevos | Permite encontrar trabajo sin conocer el chat anterior |
+| Router | Control de acceso y ruteo a fuentes registradas | Evita consultas a la fuente equivocada o a una audiencia indebida |
+| Audiencia | Destinatarios autorizados de una respuesta | Un resumen interno no debe pasar a un lector publico |
+| Clasificacion | Regla de tratamiento del contenido | Indica si puede circular un cuerpo, un resumen o solo un puntero |
+| Frescura | Correspondencia de una derivacion con la fuente actual | Impide usar contexto vencido como estado presente |
+| Cache | Respuesta derivada reutilizable | Ahorra repetir consultas mientras su evidencia siga vigente |
+| Handoff | Relevo con estado y proximo paso | Permite continuar con otra persona o motor |
+| Autoridad | Fuente que define la verdad del tema | Resuelve contradicciones con notas y resumenes |
+
+Audiencia y clasificacion se complementan: un documento interno puede estar
+permitido para un equipo y denegado a otro. Un hash es una huella de archivo;
+sirve para detectar cambios, no para demostrar que el contenido es correcto.
+La frescura Git se mide en la subruta pertinente y tambien comprueba cambios
+sin confirmar. Para memoria ignorada se pueden usar huellas de archivos.
+
 Esta es la parte que permite que una IA le pase trabajo a otra sin que la
 tercera tenga que volver a descubrir todo desde cero.
 
@@ -104,9 +127,11 @@ Una base de conocimiento puede funcionar como destino de conceptos durables:
 - procedimientos que deben sobrevivir a un cambio de persona;
 - referencias a fuentes, sin duplicar sus cuerpos.
 
-El flujo recomendado es fuente -> memoria local -> handoff sanitizado -> base
-durable. No es una sincronizacion ciega en sentido contrario. La base durable
-debe apuntar a la autoridad y declarar su frescura.
+Obsidian puede actuar como interfaz de lectura, enlaces y conocimiento personal
+durable. No es un bus automatico que copie todos los repositorios al vault.
+La memoria de proyecto permanece en el proyecto y la memoria general permanece
+en el hub. Un aprendizaje destinado a otra base se registra selectivamente,
+segun su autoridad y clasificacion, con referencias a las fuentes permitidas.
 
 ## 7. Antibucles
 

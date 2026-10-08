@@ -1,5 +1,9 @@
 # Caso de estudio: de contexto perdido a memoria operable
 
+Can I Play with Madness? El problema aparece cuando cambia el interprete y la
+decision se queda en una conversacion. Este caso explica el criterio para
+darle al proyecto una memoria que el siguiente motor pueda recuperar.
+
 Este caso muestra el criterio detras del patron. No reproduce datos de un
 entorno real ni pretende ser un log de ejecucion.
 

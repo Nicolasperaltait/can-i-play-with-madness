@@ -1,5 +1,10 @@
 # Playbook de implementacion
 
+Can I Play with Madness? Empezar por una memoria local verificable permite
+sumar motores conservando una forma de volver al estado y a la evidencia.
+La primera tarea es definir autoridad y continuidad; los conectores vienen
+despues, con una funcion y un criterio de aceptacion concretos.
+
 Este playbook describe una forma prudente de empezar. No depende de un proveedor
 de IA ni de una plataforma especifica.
 

@@ -1,7 +1,17 @@
-# Persistent AI Memory Workflow
+# Can I Play with Madness?
 
-> Can I Play with Madness? Si una IA puede perder el contexto, el workflow
-> necesita memoria, limites y evidencia.
+> Si. La IA puede improvisar. Las decisiones importantes merecen una partitura.
+
+ChatGPT, Codex, Claude, Claude Code, modelos locales y un fallback pueden
+participar del mismo trabajo. Cada uno aporta algo; ninguno recuerda por arte
+de magia lo que hicieron los demas. Sin un protocolo, la siguiente sesion pide
+otra vez una decision que ya explicamos tres veces. La cuarta explicacion
+empieza a parecer parte del puesto de trabajo.
+
+Este proyecto muestra criterio profesional para usar varios motores: conservar
+decisiones, recuperar contexto, verificar resultados y administrar capacidad.
+Podemos jugar con la locura si implementamos la IA con memoria, limites y una
+forma concreta de relevar el trabajo.
 
 Este repositorio documenta un patron para que varios motores de inteligencia
 artificial trabajen sobre el mismo conocimiento sin depender de que una sola
@@ -9,8 +19,7 @@ ventana recuerde todo. La propuesta separa el codigo, la memoria local del
 proyecto, el hub compartido, el conocimiento durable y la publicacion.
 
 El titulo es una referencia editorial a **Can I Play with Madness**, de Iron Maiden,
-y a la charla de Chema Alonso que usa esa referencia para hablar de los limites
-entre tecnologia, criterio y riesgo. No se reproducen letras ni contenido de
+y a la referencia de Chema Alonso que inspira esta presentacion. No se reproducen letras ni contenido de
 la charla: se toma la pregunta como una buena forma de presentar el problema.
 
 ## En 30 segundos
@@ -67,6 +76,36 @@ La arquitectura distingue cinco responsabilidades:
 
 ## Como funciona el workflow
 
+### Una memoria general y una memoria por proyecto
+
+La memoria general conserva reglas transversales y decisiones que afectan a
+varios proyectos. El hub compartido es el lugar que aloja esa memoria, el
+catalogo y los relevos. Cada repositorio mantiene ademas su memoria propia:
+estado actual, decisiones, errores, evidencia y proximo paso. El detalle se
+escribe una sola vez en el proyecto; el hub guarda coordinacion y punteros.
+
+Ejemplo ficticio: una aplicacion conserva una validacion para impedir un envio
+duplicado. El codigo contiene la validacion; la memoria explica por que existe,
+como se probo y que falta. El siguiente motor consulta esa memoria antes de
+proponer cambios. El hub permite encontrarla sin copiar toda la aplicacion.
+
+Memoria persistente significa recuperar contexto externo cuando hace falta.
+No cambia los pesos del modelo: el conocimiento sobrevive al chat porque esta
+en documentos propios. La memoria de la plataforma queda como apoyo secundario.
+
+### El router, la audiencia y la frescura
+
+El router localiza la fuente correcta y comprueba si puede entregar informacion.
+La audiencia es quien esta autorizado a recibirla: un equipo de desarrollo y
+un lector publico tienen permisos distintos. La frescura indica si la respuesta
+sigue representando a la fuente. Una cache escrita ayer puede estar vencida si
+el archivo cambio hoy, incluso antes de hacer commit.
+
+Si hay una respuesta autorizada y vigente, se reutiliza. Si falta, se consulta
+la fuente. Si no hay permiso, se devuelve un puntero o se detiene la consulta.
+"Mandale todo, por las dudas" deja de ser la estrategia de contexto. Suele
+funcionar hasta que alguien pregunta que habia en "todo".
+
 1. Una persona o una IA modifica una fuente de trabajo.
 2. Un trigger detecta el evento, mide la divergencia o solicita un recibo.
 3. El router identifica la fuente, la clasificacion y la audiencia autorizada.
@@ -109,6 +148,8 @@ no afirma que todas las conexiones esten activas en todos los entornos.
 
 ## Documentacion
 
+- [Memoria de cada proyecto, paso a paso](docs/07-memoria-de-proyecto.md)
+- [Motores, IA local, fallback y presupuesto de tokens](docs/08-motores-fallback-y-tokens.md)
 - [Arquitectura y modelo mental](docs/01-arquitectura.md)
 - [Triggers, recibos y automatizacion](docs/02-triggers-y-automatizacion.md)
 - [Memoria, ruteo y triangulacion](docs/03-memoria-ruteo-y-triangulacion.md)
@@ -140,6 +181,28 @@ teniendo una autoridad, una audiencia y un limite de exposicion claros.
 - No sincroniza datos privados hacia una base publica.
 - No reemplaza control de versiones, backups, permisos ni auditoria.
 - No considera que una respuesta de IA sea evidencia por si sola.
+
+## Los motores del workflow
+
+| Herramienta | Papel en este ecosistema |
+|---|---|
+| ChatGPT y Codex | Conversacion y trabajo sobre repositorios; Codex verifica archivos y puede coordinar tareas delimitadas |
+| Claude y Claude Code | Analisis y trabajo tecnico; Claude Code dispone de controles de ciclo de sesion |
+| IA local: Qwen3 Instruct y Qwen3 VL Instruct | Familias de texto y multimodal disponibles localmente; su aptitud se comprueba por tarea |
+| Antigravity | Fallback de continuidad con contexto minimo y uso consciente del presupuesto disponible |
+
+Se describen herramientas utilizadas y familias locales verificadas como
+instaladas. No se atribuye una integracion automatica a partir de la instalacion.
+El ahorro usa respuestas vigentes, consultas acotadas y relevos pequenos; no
+hay porcentajes medidos ni conmutacion automatica por consumo acreditados aqui.
+
+## Entonces, podemos jugar con la locura?
+
+Si. Con memoria local, una autoridad por tema y relevos verificables, podemos
+cambiar de motor sin empezar de cero. En una empresa, el mismo criterio permite
+que cada area mantenga sus fuentes y los agentes encuentren contexto vigente
+con permisos definidos. Tener cuatro guitarristas no obliga a que todos hagan
+el solo: el valor esta en repartir el trabajo y conservar la partitura.
 
 ## Publicacion y sanitizacion
 

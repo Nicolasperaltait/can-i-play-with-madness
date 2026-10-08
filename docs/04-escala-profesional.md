@@ -1,5 +1,10 @@
 # Escala profesional y empresarial
 
+Can I Play with Madness? A escala empresarial la pregunta se transforma en
+como coordinar muchas voces con propietarios, permisos y fuentes vigentes.
+La propuesta requiere responsables por dominio: reunir documentos sin esos
+contratos multiplica la ambiguedad que los agentes reciben.
+
 En un equipo pequeno, el hub puede ser un repositorio Markdown. En una empresa,
 el mismo patron puede convertirse en una plataforma de conocimiento gobernada.
 La idea central no cambia: cada dominio mantiene autoridad y la IA consulta por

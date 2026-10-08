@@ -1,5 +1,9 @@
 # Seguridad, privacidad y sanitizacion
 
+Can I Play with Madness? Si, cuando podemos definir que ve cada participante
+y revocar ese acceso. Compartir la partitura no exige entregar las llaves del
+edificio: la audiencia delimita el contexto de cada tarea.
+
 La memoria persistente amplifica tanto el conocimiento util como el impacto de
 una filtracion. La seguridad debe ser parte del flujo, no una revision al final.
 

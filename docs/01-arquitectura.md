@@ -1,5 +1,13 @@
 # Arquitectura y modelo mental
 
+Can I Play with Madness? La arquitectura es la partitura: define que recuerda
+cada proyecto y como encuentran contexto los distintos motores.
+
+El hub es un nodo compartido de coordinacion y memoria general. Un catalogo
+localiza fuentes; un indice localiza temas. La memoria de proyecto explica
+decisiones propias. Esta separacion permite continuidad sin convertir cada
+motor en el propietario de una version diferente del conocimiento.
+
 La arquitectura no empieza por el modelo de IA. Empieza por la autoridad de
 los datos y por la pregunta: que debe sobrevivir cuando se cierra la sesion.
 

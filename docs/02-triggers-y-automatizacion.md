@@ -1,5 +1,18 @@
 # Triggers, recibos y automatizacion
 
+Can I Play with Madness? Los triggers son las entradas a tiempo: el control
+correcto cuando empieza una sesion, termina una tanda o se prepara un commit.
+
+Un hook conecta ese evento con un script. Un wrapper local adapta el evento al
+runtime compartido de verificacion. Un recibo guarda identidad y evidencia del
+cierre. La entrada de memoria explica el significado del trabajo: cada pieza
+tiene una funcion diferente.
+
+Por que existen: una regla escrita puede olvidarse al cambiar de sesion. Para
+que sirven: detectar que falta continuidad y exigir evidencia antes del cierre.
+Los scripts usan Git, metadata, hashes y contratos de proyecto; la redaccion de
+hechos sigue a cargo del agente que comprobo el resultado.
+
 Un trigger es una reaccion a un evento. No es una autorizacion general para
 leer, copiar o publicar datos.
 
