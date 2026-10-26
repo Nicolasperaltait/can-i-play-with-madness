@@ -1,4 +1,4 @@
-# Can I Play with Madness?
+# Can I Play with IA Madness?
 
 **Idioma / Language:** Espanol | [English](docs/en/README.md)
 
